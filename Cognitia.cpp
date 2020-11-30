@@ -360,10 +360,7 @@ public:
             error();
         }
 
-        if (encontrado == false)
-        {
-            cout << endl << "No se encontro ningun registro con ese numero de cuenta!" << endl;
-        }
+        
         leer.close();
         verificar.close();
         mostrar.close();
@@ -403,7 +400,7 @@ public:
                 cout << "Carnet: " << Carnet << endl;
                 cout << endl;
             }
-
+            i--;
             if (i == 1)
                 cout << "Hay un solo cliente registrado" << endl << endl;
 
@@ -518,7 +515,7 @@ public:
             }
         } while (opcion != 6);
     }
-   
+
 };
 
 
@@ -541,19 +538,19 @@ void pausa()
 
 void error()
 {
-    cout << "No se pudo abrir el archivo de registros, asegurese que el archivo se encuentre en"<<endl;
-    cout << "la misma ubicacion que el programa o que el archivo de texto se llame:"<<endl;
-    cout << "clientes.txt, si el archivo tiene otro nombre renombrelo al ya mencionado"<<endl;
+    cout << "No se pudo abrir el archivo de registros, asegurese que el archivo se encuentre en" << endl;
+    cout << "la misma ubicacion que el programa o que el archivo de texto se llame:" << endl;
+    cout << "clientes.txt, si el archivo tiene otro nombre renombrelo al ya mencionado" << endl;
 }
 
 void modo() {
     int color;
     do {
-    cout << "1. Modo oscuro" << endl;
-    cout << "2. Modo Claro" << endl;
-    cout << "Opcion: ";
-    cin >> color;
-    
+        cout << "1. Modo oscuro" << endl;
+        cout << "2. Modo Claro" << endl;
+        cout << "Opcion: ";
+        cin >> color;
+
         switch (color)
         {
         case 1:
